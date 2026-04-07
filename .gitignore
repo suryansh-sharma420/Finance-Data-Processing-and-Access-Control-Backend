@@ -1,0 +1,22 @@
+# Environments
+app/venv/
+venv/
+env/
+.env
+
+# Pytest / Cache
+.pytest_cache/
+__pycache__/
+*.pyc
+
+# Database
+sql_app.db
+
+# Generated / Output
+openapi.json
+token.txt
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
