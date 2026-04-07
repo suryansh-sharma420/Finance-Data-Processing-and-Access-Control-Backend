@@ -2,7 +2,7 @@
 
 A comprehensive, robust, and cleanly-layered backend API for tracking financial records, performing data analytics, and enforcing Role-Based Access Control (RBAC).
 
-## 🚀 Key Features
+##  Key Features
 
 *   **FastAPI & Pydantic**: Leverages FastAPI for high-performance routing and OpenAPI documentation generation, with Pydantic enforcing strict type safety and request validation.
 *   **Clean Layered Architecture**: Decoupled design prioritizing maintainability. Routes handle HTTP, Services handle core business logic, and Repositories handle SQLAlchemy database queries.
@@ -16,7 +16,7 @@ A comprehensive, robust, and cleanly-layered backend API for tracking financial 
 
 ---
 
-## 🏗️ Architectural Layers
+##  Architectural Layers
 
 The system adheres to a strict separation of concerns to avoid logic bleeding:
 
@@ -27,7 +27,7 @@ The system adheres to a strict separation of concerns to avoid logic bleeding:
 
 ---
 
-## 🔐 Security & Access Flow
+##  Security & Access Flow
 
 When a request arrives, such as creating a new User via `POST /api/v1/users/`:
 1.  **Token Interception**: The `reusable_oauth2` dependency extracts the Bearer token.
@@ -38,7 +38,7 @@ When a request arrives, such as creating a new User via `POST /api/v1/users/`:
 
 ---
 
-## 📈 Dashboard Analytics Endpoints
+##  Dashboard Analytics Endpoints
 
 The system exposes highly dynamic dashboard endpoints (`/api/v1/dashboard/*`):
 *   **/summary**: Aggregates total income and expenses within specific `start_date` and `end_date` bounds.
@@ -47,7 +47,7 @@ The system exposes highly dynamic dashboard endpoints (`/api/v1/dashboard/*`):
 
 ---
 
-## 🛠️ Quick Setup & Installation
+##  Quick Setup & Installation
 
 ### 1. Initialize Virtual Environment & Dependencies
 ```bash
