@@ -73,7 +73,25 @@ uvicorn app.main:app --reload
 ```
 Navigate your browser to `http://127.0.0.1:8000/docs` to interface with the fully interactive Swagger UI documentation. Click the **Authorize** lock to log in.
 
-### 4. Execute the Test Suite
+### 4. Launch the Streamlit Frontend
+In a separate terminal (with the same virtual environment activated), run:
+```bash
+streamlit run streamlit_app.py
+```
+The Streamlit UI opens at `http://localhost:8501` and is fully wired to the backend endpoints:
+*   **Authentication** (`/auth/login`, `/auth/me`)
+*   **Users** (`/users/` create/list/get/update/delete)
+*   **Records** (`/records/` create/list/get/update/delete)
+*   **Dashboard Analytics** (`/dashboard/summary`, `/dashboard/trends`, `/dashboard/category-breakdown`)
+
+By default, it connects to `http://127.0.0.1:8000/api/v1`. You can override it with:
+```bash
+# Windows PowerShell
+$env:API_BASE_URL="http://127.0.0.1:8000/api/v1"
+streamlit run streamlit_app.py
+```
+
+### 5. Execute the Test Suite
 ```bash
 pytest -v
 ```
